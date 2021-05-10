@@ -258,38 +258,6 @@
             endingLineNumber = "53"
             landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "08580541-11CC-45E8-9EA4-9A13CE7EAB6F - c57b539fade40266"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MovieList.MovieDetailsViewController.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
-                  moduleName = "MovieList"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tangsinyee/Documents/MovieList/MovieList/MovieDetailsViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "1077">
-               </Location>
-               <Location
-                  uuid = "08580541-11CC-45E8-9EA4-9A13CE7EAB6F - c57b539fade40266"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MovieList.MovieDetailsViewController.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
-                  moduleName = "MovieList"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tangsinyee/Documents/MovieList/MovieList/MovieDetailsViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "1151">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

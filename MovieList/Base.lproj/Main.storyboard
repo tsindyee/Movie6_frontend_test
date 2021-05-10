@@ -220,24 +220,51 @@
                                                                     <color key="textColor" systemColor="systemYellowColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JoB-PU-J8I" customClass="CosmosView" customModule="Cosmos">
+                                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gap-dX-ybK">
                                                                     <rect key="frame" x="32.5" y="44.5" width="75" height="15"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="75" id="YIK-xf-QeZ"/>
-                                                                        <constraint firstAttribute="height" constant="15" id="b0F-DU-DfL"/>
-                                                                    </constraints>
-                                                                    <userDefinedRuntimeAttributes>
-                                                                        <userDefinedRuntimeAttribute type="number" keyPath="rating">
-                                                                            <real key="value" value="4"/>
-                                                                        </userDefinedRuntimeAttribute>
-                                                                        <userDefinedRuntimeAttribute type="number" keyPath="starSize">
-                                                                            <real key="value" value="15"/>
-                                                                        </userDefinedRuntimeAttribute>
-                                                                        <userDefinedRuntimeAttribute type="number" keyPath="starMargin">
-                                                                            <real key="value" value="0.0"/>
-                                                                        </userDefinedRuntimeAttribute>
-                                                                    </userDefinedRuntimeAttributes>
-                                                                </view>
+                                                                    <subviews>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ws3-Vh-qH4">
+                                                                            <rect key="frame" x="0.0" y="-0.5" width="15" height="15"/>
+                                                                            <color key="tintColor" systemColor="systemYellowColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="15" id="E6L-v1-8yd"/>
+                                                                                <constraint firstAttribute="width" constant="15" id="ho2-jJ-yNw"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5CD-qj-yrw">
+                                                                            <rect key="frame" x="15" y="-0.5" width="15" height="15"/>
+                                                                            <color key="tintColor" systemColor="systemYellowColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="15" id="AbK-G9-DZN"/>
+                                                                                <constraint firstAttribute="height" constant="15" id="IdA-7V-wBB"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sTd-Uh-CX1">
+                                                                            <rect key="frame" x="30" y="-0.5" width="15" height="15"/>
+                                                                            <color key="tintColor" systemColor="systemYellowColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="15" id="MlX-Pf-C76"/>
+                                                                                <constraint firstAttribute="width" constant="15" id="Pou-1F-Zpb"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nXz-O9-wie">
+                                                                            <rect key="frame" x="45" y="-0.5" width="15" height="15"/>
+                                                                            <color key="tintColor" systemColor="systemYellowColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="15" id="AOr-Th-D4U"/>
+                                                                                <constraint firstAttribute="width" constant="15" id="KIU-VH-7xp"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bK9-gq-BMu">
+                                                                            <rect key="frame" x="60" y="-0.5" width="15" height="15"/>
+                                                                            <color key="tintColor" systemColor="systemYellowColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="15" id="EMC-WP-wyk"/>
+                                                                                <constraint firstAttribute="height" constant="15" id="YC4-Z5-WdE"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                    </subviews>
+                                                                </stackView>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstAttribute="trailing" secondItem="EWy-ul-xHa" secondAttribute="trailing" id="CIi-0d-KeR"/>
@@ -328,7 +355,11 @@
                                             <outlet property="favCountLabel" destination="63P-VB-WwB" id="eF3-Hj-r98"/>
                                             <outlet property="nameLabel" destination="Uyy-dN-3y4" id="miP-N2-pxh"/>
                                             <outlet property="ratingLabel" destination="EWy-ul-xHa" id="eiB-1N-pPy"/>
-                                            <outlet property="starRatingView" destination="JoB-PU-J8I" id="EZl-Js-ZP9"/>
+                                            <outletCollection property="ratingStarCollection" destination="Ws3-Vh-qH4" collectionClass="NSMutableArray" id="MYY-un-TPr"/>
+                                            <outletCollection property="ratingStarCollection" destination="5CD-qj-yrw" collectionClass="NSMutableArray" id="SMk-6l-psI"/>
+                                            <outletCollection property="ratingStarCollection" destination="sTd-Uh-CX1" collectionClass="NSMutableArray" id="6Yp-ev-389"/>
+                                            <outletCollection property="ratingStarCollection" destination="nXz-O9-wie" collectionClass="NSMutableArray" id="N8a-WM-zhp"/>
+                                            <outletCollection property="ratingStarCollection" destination="bK9-gq-BMu" collectionClass="NSMutableArray" id="1eA-qE-hcW"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MovieDetailsSynopsisTableViewCellId" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MovieDetailsSynopsisTableViewCellId" id="m3e-CG-hQq" customClass="MovieDetailsSynopsisTableViewCell" customModule="MovieList" customModuleProvider="target">
@@ -341,7 +372,7 @@
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" placeholderIntrinsicWidth="335" placeholderIntrinsicHeight="83" translatesAutoresizingMaskIntoConstraints="NO" id="y8o-B5-o6X" customClass="ReadMoreTextView" customModule="ReadMoreTextView">
                                                     <rect key="frame" x="8" y="0.0" width="398" height="83.5"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -463,24 +494,51 @@
                                                             <color key="textColor" systemColor="systemYellowColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eHX-20-ugu" customClass="CosmosView" customModule="Cosmos">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JBy-kK-6td">
                                                             <rect key="frame" x="0.0" y="44" width="75" height="15"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="75" id="BSv-lT-4lz"/>
-                                                                <constraint firstAttribute="height" constant="15" id="mJ5-ut-Puu"/>
-                                                            </constraints>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="rating">
-                                                                    <real key="value" value="4"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="starSize">
-                                                                    <real key="value" value="15"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="starMargin">
-                                                                    <real key="value" value="0.0"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                        </view>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SpO-lt-WC8">
+                                                                    <rect key="frame" x="0.0" y="-0.5" width="15" height="15"/>
+                                                                    <color key="tintColor" systemColor="systemYellowColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="15" id="Q5k-pW-VQp"/>
+                                                                        <constraint firstAttribute="width" constant="15" id="im0-ve-kUv"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bUC-ds-vil">
+                                                                    <rect key="frame" x="15" y="-0.5" width="15" height="15"/>
+                                                                    <color key="tintColor" systemColor="systemYellowColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="15" id="gyC-fL-YEu"/>
+                                                                        <constraint firstAttribute="width" constant="15" id="pPA-63-Qba"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qHC-0b-Bua">
+                                                                    <rect key="frame" x="30" y="-0.5" width="15" height="15"/>
+                                                                    <color key="tintColor" systemColor="systemYellowColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="15" id="g3d-qK-bS5"/>
+                                                                        <constraint firstAttribute="height" constant="15" id="nYX-hD-7ZK"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="AXi-Ae-XM6">
+                                                                    <rect key="frame" x="45" y="-0.5" width="15" height="15"/>
+                                                                    <color key="tintColor" systemColor="systemYellowColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="15" id="cHV-0r-yuk"/>
+                                                                        <constraint firstAttribute="height" constant="15" id="nD3-Lg-vjR"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gNs-P4-hXX">
+                                                                    <rect key="frame" x="60" y="-0.5" width="15" height="15"/>
+                                                                    <color key="tintColor" systemColor="systemYellowColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="15" id="4gx-cT-mfa"/>
+                                                                        <constraint firstAttribute="height" constant="15" id="Bt9-oz-FCp"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                        </stackView>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="9cj-eg-Zfc" firstAttribute="leading" secondItem="MZg-zg-00H" secondAttribute="leading" id="VcP-Wl-sDK"/>
@@ -572,8 +630,12 @@
                                     <outlet property="favCountLabel" destination="aJf-an-zqN" id="cuW-S1-K89"/>
                                     <outlet property="nameLabel" destination="7aT-Ar-gNf" id="zAJ-rh-mFe"/>
                                     <outlet property="ratingLabel" destination="9cj-eg-Zfc" id="IhP-jr-VnA"/>
-                                    <outlet property="starView" destination="eHX-20-ugu" id="HGK-78-kPo"/>
                                     <outlet property="thumbnailView" destination="Xfv-IA-wMH" id="bQo-f9-vpP"/>
+                                    <outletCollection property="ratingStarCollection" destination="SpO-lt-WC8" collectionClass="NSMutableArray" id="V9b-tR-CEv"/>
+                                    <outletCollection property="ratingStarCollection" destination="bUC-ds-vil" collectionClass="NSMutableArray" id="UA9-jp-jGC"/>
+                                    <outletCollection property="ratingStarCollection" destination="qHC-0b-Bua" collectionClass="NSMutableArray" id="jll-aS-bub"/>
+                                    <outletCollection property="ratingStarCollection" destination="AXi-Ae-XM6" collectionClass="NSMutableArray" id="p27-4K-L6r"/>
+                                    <outletCollection property="ratingStarCollection" destination="gNs-P4-hXX" collectionClass="NSMutableArray" id="9dM-9N-wi8"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -618,6 +680,7 @@
         <image name="photo" catalog="system" width="128" height="93"/>
         <image name="rectangle.grid.2x2" catalog="system" width="128" height="99"/>
         <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

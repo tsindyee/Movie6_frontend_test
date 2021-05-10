@@ -6,14 +6,11 @@
 //
 
 import UIKit
-import Cosmos
 import Kingfisher
 
 class MovieListItemTableViewCell: UITableViewCell {
     
     @IBOutlet weak var thumbnailView: UIImageView!
-
-    @IBOutlet weak var starView: CosmosView!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
@@ -22,19 +19,32 @@ class MovieListItemTableViewCell: UITableViewCell {
     
     @IBOutlet weak var dateLabel: UILabel!
     
+    @IBOutlet var ratingStarCollection: [UIImageView]!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
+    func setRating(_ rating: Double) {
+        let fullStarCount = Int(rating) / 100
+        let withHalfStar = Int(rating) % 100 != 0
+        ratingStarCollection.forEach { $0.image = UIImage(systemName: "star") }
+        for i in 0..<fullStarCount {
+            ratingStarCollection[i].image = UIImage(systemName: "star.fill")
+        }
+        if withHalfStar, fullStarCount < 5 {
+            ratingStarCollection[fullStarCount].image = UIImage(systemName: "star.fill.left")
+        }
+    }
+    
     func configureCell(with movieListItem: MovieListItem!, dateString: String?, thumbnailURL: URL?) {
-        starView.settings.fillMode = .half
         if let rating = movieListItem.rating {
             let ratingString = String(format: "%.1f", rating / 100)
-            starView.rating = rating / 100
+            setRating(rating)
             ratingLabel.text = ratingString
         } else {
-            starView.rating = 0
+            setRating(0)
             ratingLabel.text = "- -"
         }
         nameLabel.text = movieListItem.chiName

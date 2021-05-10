@@ -7,7 +7,6 @@ target 'MovieList' do
 
   pod 'ImageSlideshow'
   pod "ImageSlideshow/SDWebImage"
-  pod 'Cosmos', '~> 23.0'
   pod 'Kingfisher', '~> 6.0'
   pod 'ReadMoreTextView'
   
