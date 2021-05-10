@@ -1,0 +1,39 @@
+PODS:
+  - Cosmos (23.0.0)
+  - ImageSlideshow (1.9.2):
+    - ImageSlideshow/Core (= 1.9.2)
+  - ImageSlideshow/Core (1.9.2)
+  - ImageSlideshow/SDWebImage (1.9.2):
+    - ImageSlideshow/Core
+    - SDWebImage (>= 3.7)
+  - Kingfisher (6.3.0)
+  - ReadMoreTextView (3.0.1)
+  - SDWebImage (5.11.1):
+    - SDWebImage/Core (= 5.11.1)
+  - SDWebImage/Core (5.11.1)
+
+DEPENDENCIES:
+  - Cosmos (~> 23.0)
+  - ImageSlideshow
+  - ImageSlideshow/SDWebImage
+  - Kingfisher (~> 6.0)
+  - ReadMoreTextView
+
+SPEC REPOS:
+  trunk:
+    - Cosmos
+    - ImageSlideshow
+    - Kingfisher
+    - ReadMoreTextView
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
+  ImageSlideshow: be305b54eaf2b2cfc7a7141c7c734605d44dc07d
+  Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
+  ReadMoreTextView: 19147adf93abce6d7271e14031a00303fe28720d
+  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
+
+PODFILE CHECKSUM: d2a9b3e7d88cc97e24c558b1763a0f71286e22ac
+
+COCOAPODS: 1.10.1
